@@ -11,6 +11,12 @@
         "site": {
           "type": "string"
         },
+        "contactPhone": {
+          "type": "string"
+        },
+        "contactEmail": {
+          "type": "string"
+        },
         "base": {
           "type": "string"
         },

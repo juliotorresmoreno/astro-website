@@ -5,15 +5,16 @@ import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
+//import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+// import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+// import Stats from '~/components/widgets/Stats.astro';
+//import CallToAction from '~/components/widgets/CallToAction.astro';
+import { SITE } from '~/utils/config';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: `${SITE?.name}: Pioneering the Future of Technology and AI`,
   ignoreTitleTemplate: true,
 };
 ---
@@ -22,31 +23,16 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-      { text: 'Learn more', href: '#features' },
-    ]}
-    image={{ src: '~/assets/images/hero.png', alt: 'AstroWind Hero Image' }}
+    actions={[{ variant: 'primary', text: 'Learn more', href: '#features' }]}
+    image={{ src: '~/assets/images/tree-2987962_1280.jpg', alt: 'AstroWind Hero Image' }}
   >
-    <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 3.0</span> + Tailwind CSS
-    </Fragment>
+    <Fragment slot="title">Create the future, breathe life into your business, and thrive.</Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 3.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-       Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages
-      & Blogs.
+        Explore Technology and AI through the Vision of {SITE?.name}, a Forward-Thinking Software Developer on a Mission
+        for Intelligent Solutions.
+      </span>
     </Fragment>
   </Hero>
 
@@ -59,44 +45,43 @@ const metadata = {
   <Features
     id="features"
     tagline="Features"
-    title="What you get with AstroWind"
+    title="What can you achieve with us?"
     subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Custom Web Application Development',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
+          'Create unique web applications tailored to your needs, using the latest web technologies for efficiency and innovation.',
         icon: 'tabler:brand-tailwind',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Mobile App Development',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
+          'Craft mobile apps for Android and iOS, integrating them seamlessly with web systems and databases.',
         icon: 'tabler:list-check',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Data Analysis and Visualization',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+          'Understand and leverage your data with data analysis, predictive modeling, and visualizations for informed decision-making.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Dashboard Design',
+        description: 'Monitor key data in real-time with interactive dashboards, showcasing KPIs and business metrics.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Bot Integration',
+        description:
+          'Enhance user experiences and automate processes with the seamless integration of chatbots and AI-driven bots into your digital platforms.',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Data Science Consulting',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
+          'Help businesses effectively use data through expert consulting and provide training for internal teams.',
         icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
       },
     ]}
   />
@@ -105,27 +90,27 @@ const metadata = {
 
   <Content
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    tagline="Insides"
+    title="Our creations: Coding magic for a digital kingdom."
     items={[
       {
-        title: 'Built on top of Astro 3.0',
+        title: 'Robust and Secure Code',
         description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+          "We develop code that's not just functional, but also secure, providing peace of mind for both you and your users.",
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'Scalable Architectures',
         description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+          "Our solutions are built with scalability in mind, ensuring they can grow alongside your business's needs.",
       },
       {
-        title: 'Cross-browser compatibility',
+        title: 'Rigorous Testing Frameworks',
         description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+          'We employ comprehensive testing methodologies to deliver code that is reliable and robust under all conditions.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      src: 'src/assets/images/programmer-1653351_1280.png',
       alt: 'Colorful Image',
     }}
   >
@@ -145,13 +130,13 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
+        title: 'Future-Proofed Development',
+        description:
+          'Our code is designed to adapt and thrive in the face of ever-evolving technology trends and requirements.',
       },
       {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
+        title: 'Efficient Code Optimization',
+        description: 'We fine-tune our code for performance, so your applications run at peak efficiency.',
       },
       {
         title: 'Fully responsive design',
@@ -159,13 +144,12 @@ const metadata = {
           "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
       },
       {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
+        title: 'Responsive Support',
+        description: 'Count on us for quick and effective support whenever you encounter issues or need assistance.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
+      src: '/src/assets/images/connections-2099068_1280.jpg',
       alt: 'Blueprint Image',
     }}
   >
@@ -183,9 +167,9 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'Enhanced user engagement',
+        title: 'Boosted User Engagement',
         description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
+          'Engage your audience with interactive elements, user-friendly navigation, and visually captivating layouts to keep them coming back.',
       },
       {
         title: 'Continuous improvement',
@@ -193,17 +177,16 @@ const metadata = {
           'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
       },
       {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
+        title: 'Flexible Team Expansion',
+        description: 'As your project grows, we have the expertise to quickly onboard new team members when needed.',
       },
       {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
+        title: 'Inclusive Collaboration',
+        description: `We foster a collaborative environment, ensuring your input is valued every step of the way.`,
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      src: '/src/assets/images/money-6063323_1280.jpg',
       alt: 'Astronauts Image',
     }}
   >
@@ -215,7 +198,7 @@ const metadata = {
   </Content>
 
   <!-- Steps Widget ****************** -->
-
+  <!--
   <Steps
     title="Get your dream website up and running in no time with AstroWind."
     items={[
@@ -247,63 +230,67 @@ const metadata = {
       alt: 'Steps image',
     }}
   />
-
+ -->
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+    title="Mostly Recommended Approaches to Start Your MVP"
+    subtitle="Provides a simple approach to quickly start developing your business idea"
+    tagline="Recommendeds"
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
+        title: 'React.js',
         description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
+          'A widely used JavaScript framework for building interactive and responsive user interfaces in the frontend.',
+        icon: 'tabler:brand-react',
       },
       {
-        title: 'Features',
+        title: 'Nest.js',
         description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
+          'A TypeScript-based backend framework that follows module architecture, allowing for the creation of scalable and maintainable applications.',
+        icon: 'tabler:brand-typescript',
       },
       {
-        title: 'Content',
+        title: 'Generative AI Models',
         description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
+          'Artificial intelligence models capable of autonomously generating content, such as text, images, or music.',
+        icon: 'tabler:robot-face',
       },
       {
-        title: 'Call-to-Action',
+        title: 'Scrum',
         description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
+          'An agile methodology that emphasizes collaboration, incremental delivery, and continuous adaptation, which can be beneficial for managing software development projects.',
+        icon: 'tabler:growth',
       },
       {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
+        title: 'Continuous Integration and Continuous Deployment (CI/CD)',
         description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
+          'Methodologies and practices that enable automated testing and code deployment, improving efficiency in software development and delivery.',
+        icon: 'tabler:brand-aws',
       },
       {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
+        title: 'SonarQube',
+        description:
+          'A tool for continuous code quality inspection, which helps maintain code quality and identify areas for improvement.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'RESTful APIs',
+        description:
+          'Designing your APIs in a RESTful manner to achieve efficient communication between the frontend and backend.',
+        icon: 'tabler:checklist',
+      },
+      {
+        title: 'User-Centered Design (UCD)',
+        description:
+          "Focusing your development on the user experience, ensuring your software meets your customers' needs.",
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Agile User Stories',
+        description:
+          "A technique that focuses on the detailed description of functionalities from the user's perspective, which can be valuable for planning and developing agile projects.",
+        icon: 'tabler:history-off',
       },
     ]}
   >
@@ -314,6 +301,7 @@ const metadata = {
 
   <!-- HighlightedPosts Widget ******* -->
 
+  <!--
   <BlogLatestPosts
     title="Find out more content in our Blog"
     information={`The blog is used to display AstroWind documentation.
@@ -321,50 +309,52 @@ const metadata = {
                         Astro is a very interesting technology. Thanks.
                 `}
   />
+  -->
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
     title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    subtitle="Gain Valuable Insights into Common Queries About Our Services, Technologies, and Processes. Get Quick and Comprehensive Answers to Your Questions."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
+        title: 'What do I need to get started with your development services?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          "o begin, we'll discuss your project goals and requirements. We'll collaborate to define the scope, and then our team will get to work bringing your idea to life.",
       },
       {
-        title: 'What do I need to start?',
+        title: 'How can your services contribute to the growth of my business or idea?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          'We create scalable solutions that adapt to your evolving needs. Our focus on user-centric design and innovative technology empowers you to expand and reach your full potential.',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: 'What is the typical project timeline for development and deployment?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          "Project timelines can vary based on complexity, but we work efficiently to deliver solutions in a timely manner. We'll provide a detailed estimate during our initial discussions.",
       },
       {
-        title: "What's something that you don't understand?",
+        title: 'Do you provide support for scaling my application as my business grows?',
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          "Absolutely. We offer ongoing support and optimization to ensure your application scales seamlessly and keeps pace with your business's growth.",
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: 'Do you offer consultation for project ideas and feasibility assessments?',
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          "Yes, we provide consultation services to help refine your project idea and assess its feasibility. We're here to assist you from concept to execution.",
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        title: 'How do you handle data privacy and security in your development projects?',
         description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          'Data privacy and security are top priorities. We implement robust measures to protect your data and ensure compliance with relevant regulations. Your information is safe with us.',
       },
     ]}
   />
 
   <!-- Stats Widget ****************** -->
 
+  <!--
   <Stats
     stats={[
       { title: 'Downloads', amount: '132K' },
@@ -373,27 +363,47 @@ const metadata = {
       { title: 'Users', amount: '48.4K' },
     ]}
   />
+  -->
 
   <!-- CallToAction Widget *********** -->
-
+  <!--
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
+        text: 'Get Started',
+        href: '/contact',
         target: '_blank',
-        icon: 'tabler:download',
       },
     ]}
   >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
+    <Fragment slot="title">Elevate Your Digital Presence</Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Unlock the full potential of your online brand with our innovative solutions. Let us take you to the next level.
     </Fragment>
-  </CallToAction>
+  </CallToAction>-->
+
+  <Features2
+    title="We are here to help!"
+    items={[
+      {
+        title: 'General support',
+        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+      },
+      {
+        title: 'Phone',
+        description: `<a target="_blank" href='https://api.whatsapp.com/send?phone=${SITE.contactPhone}&text=Hello%20I%20would%20like%20to%20know%20more%20about%20your%20services'>
+        ${SITE.contactPhone}
+      <a/>`,
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description: `<a target="_blank" href='mailto:${SITE.contactEmail}?subject=Inquiry%20About%20[Your%20Subject]'>
+        ${SITE.contactEmail}`,
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
 </Layout>

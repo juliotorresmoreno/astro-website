@@ -162,12 +162,14 @@ export interface Input {
   label?: string;
   autocomplete?: string;
   placeholder?: string;
+  value?: string;
 }
 
 export interface Textarea {
   label?: string;
   placeholder?: string;
   rows?: number;
+  value?: string;
 }
 
 export interface Disclaimer {

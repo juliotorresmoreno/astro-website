@@ -17,12 +17,18 @@ import { ANALYTICS, SITE } from './src/utils/config.ts';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const whenExternalScripts = (items = []) =>
-  ANALYTICS.vendors.googleAnalytics.id && ANALYTICS.vendors.googleAnalytics.partytown
-    ? Array.isArray(items)
-      ? items.map((item) => item())
-      : [items()]
-    : [];
+const isGoogleAnalyticsEnabled = ANALYTICS.vendors.googleAnalytics.id && ANALYTICS.vendors.googleAnalytics.partytown;
+const whenExternalScripts = (items = []) => {
+  let externalScripts = [];
+  if (isGoogleAnalyticsEnabled) {
+    if (Array.isArray(items)) {
+      externalScripts = items.map((item) => item());
+    } else {
+      externalScripts = [items()];
+    }
+  }
+  return externalScripts;
+};
 
 export default defineConfig({
   site: SITE.site,

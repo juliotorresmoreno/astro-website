@@ -1,8 +1,9 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import HeroText from '~/components/widgets/HeroText.astro';
+// import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import { SITE } from '../utils/config';
 
 const metadata = {
   title: 'Contact',
@@ -12,25 +13,29 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
-
   <ContactUs
     title="Drop us a message today!"
     subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
+    inputs={[]}
     textarea={{
       label: 'Message',
+      rows: 20,
+      value: `Subject: Inquiry About [Your Subject]
+
+Hello ${SITE?.name},
+
+I hope this message finds you well. I'm writing to make an inquiry regarding [Your Subject]. I'm interested in getting more information about [Briefly describe your inquiry].
+
+I'm looking to [Briefly explain your goal or need].
+
+I would greatly appreciate it if we could discuss this in more detail. Please let me know when it would be convenient for you, so we can coordinate a conversation.
+
+Thank you in advance for your time and consideration. I look forward to your response.
+
+Best regards,
+[Your Name]
+[Your Phone Number]
+[Your Email]`,
     }}
     disclaimer={{
       label:
@@ -40,7 +45,6 @@ const metadata = {
   />
 
   <!-- Features2 Widget ************** -->
-
   <Features2
     title="We are here to help!"
     items={[
@@ -49,29 +53,17 @@ const metadata = {
         description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
       },
       {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
         title: 'Phone',
-        description: '+1 (234) 567-890',
+        description: `<a target="_blank" href='https://api.whatsapp.com/send?phone=${SITE.contactPhone}&text=Hello%20I%20would%20like%20to%20know%20more%20about%20your%20services'>
+          ${SITE.contactPhone}
+        <a/>`,
         icon: 'tabler:headset',
       },
       {
         title: 'Email',
-        description: 'contact@support.com',
+        description: `<a target="_blank" href='mailto:${SITE.contactEmail}?subject=Inquiry%20About%20[Your%20Subject]'>
+          ${SITE.contactEmail}`,
         icon: 'tabler:mail',
-      },
-      {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
       },
     ]}
   />
