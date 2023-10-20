@@ -33,7 +33,12 @@ const links = [
 ];*/
 
 export const headerData = {
-  links: [],
+  links: [
+    {
+      text: 'About Me',
+      href: getPermalink('/about'),
+    },
+  ],
   actions: [
     {
       text: 'Text Me',
@@ -103,10 +108,10 @@ export const footerData = {
     {
       ariaLabel: 'Linkedin',
       icon: 'tabler:brand-linkedin',
-      href: 'https://www.linkedin.com/in/julio-cesar-torres-moreno/',
+      href: SITE.linkedin,
     },
     // { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/juliotorresmoreno' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: SITE.github },
   ],
   footNote: `Made by ${SITE?.name}· All rights reserved.`,
 };

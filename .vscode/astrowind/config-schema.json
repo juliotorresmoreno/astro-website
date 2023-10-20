@@ -11,6 +11,74 @@
         "site": {
           "type": "string"
         },
+        "github": {
+          "type": "string"
+        },
+        "linkedin": {
+          "type": "string"
+        },
+        "upwork": {
+          "type": "string"
+        },
+        "education": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "school": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "studyType": {
+                  "type": "string"
+                },
+                "startDate": {
+                  "type": "string"
+                },
+                "endDate": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "experience": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "company": {
+                  "type": "string"
+                },
+                "position": {
+                  "type": "string"
+                },
+                "startDate": {
+                  "type": "string"
+                },
+                "endDate": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "keywords": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "required": ["company", "position", "startDate", "endDate", "description"]
+            }
+          ]
+        },
         "contactPhone": {
           "type": "string"
         },

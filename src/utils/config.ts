@@ -1,8 +1,24 @@
 import fs from 'fs';
 import yaml from 'js-yaml';
 import merge from 'lodash.merge';
-
 import type { MetaData } from '~/types';
+
+type Experience = {
+  company: string;
+  position: string;
+  startDate: string;
+  endDate: string;
+  description: string;
+  keywords: string[];
+};
+
+type Education = {
+  school: string;
+  title: string;
+  studyType: string;
+  startDate: string;
+  endDate: string;
+};
 
 export interface SiteConfig {
   name: string;
@@ -12,6 +28,11 @@ export interface SiteConfig {
   googleSiteVerificationId?: string;
   contactPhone?: string;
   contactEmail?: string;
+  github?: string;
+  linkedin?: string;
+  upwork?: string;
+  experience?: Experience[];
+  education?: Education[];
 }
 export interface MetaDataConfig extends Omit<MetaData, 'title'> {
   title?: {
