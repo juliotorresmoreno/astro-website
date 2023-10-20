@@ -2,7 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
+//import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 //import Steps from '~/components/widgets/Steps.astro';
@@ -38,7 +38,66 @@ const metadata = {
 
   <!-- Note Widget ******************* -->
 
-  <Note />
+  <Content
+    id="about"
+    columns={3}
+    items={[
+      {
+        icon: 'tabler:brand-youtube',
+        callToAction: {
+          target: '_blank',
+          text: 'Youtube',
+          href: SITE.youtube,
+        },
+      },
+      {
+        icon: 'tabler:brand-medium',
+        callToAction: {
+          target: '_blank',
+          text: 'Medium',
+          href: SITE.medium,
+        },
+      },
+      {
+        icon: 'tabler:brand-linkedin',
+        callToAction: {
+          target: '_blank',
+          text: 'Linkedin',
+          href: SITE.linkedin,
+        },
+      },
+    ]}
+    image={{
+      src: '~/assets/images/photo.jpg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h3>
+      <p class="text-justify">
+        Welcome to my website! I'm Julio Cesar Jr Torres Moreno, an experienced JavaScript Backend Developer with a
+        strong focus on security. Over the years, I've refined my skills in JavaScript, NodeJS, AWS, and real-time
+        messaging integration, leading impactful projects that emphasize robust implementation and a full-stack
+        development approach.
+      </p>
+      <br />
+      <p class="text-justify">
+        More recently, I've embarked on an exciting journey into the realms of data science, exploring areas like
+        Natural Language Processing (NLP) and the captivating world of Transformers. My commitment now extends to
+        staying on the cutting edge of these fields, adding even more dimensions to my expertise.
+      </p>
+      <br />
+      <p class="text-justify">
+        Whether it's crafting secure backend solutions or delving into the transformative power of data, I'm always
+        ready for fresh, user-centric challenges. With a solid foundation in JavaScript and a growing passion for data
+        science, I'm here to contribute to innovative projects and embrace the ever-evolving tech landscape."
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
   <!-- Features Widget *************** -->
 
@@ -89,6 +148,7 @@ const metadata = {
   <!-- Content Widget **************** -->
 
   <Content
+    id="insides"
     isReversed
     tagline="Insides"
     title="Our creations: Coding magic for a digital kingdom."
@@ -234,9 +294,10 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
+    id="recommends"
     title="Mostly Recommended Approaches to Start Your MVP"
     subtitle="Provides a simple approach to quickly start developing your business idea"
-    tagline="Recommendeds"
+    tagline="Recommends"
     items={[
       {
         title: 'React.js',
@@ -314,6 +375,7 @@ const metadata = {
   <!-- FAQs Widget ******************* -->
 
   <FAQs
+    id="FAQS"
     title="Frequently Asked Questions"
     subtitle="Gain Valuable Insights into Common Queries About Our Services, Technologies, and Processes. Get Quick and Comprehensive Answers to Your Questions."
     tagline="FAQs"
@@ -385,7 +447,9 @@ const metadata = {
   </CallToAction>-->
 
   <Features2
-    title="We are here to help!"
+    id="contact"
+    title="Elevate Your Digital Presence"
+    subtitle="Ready to take the next step? Contact us now and discover how we can help you reach your goals!"
     items={[
       {
         title: 'General support',

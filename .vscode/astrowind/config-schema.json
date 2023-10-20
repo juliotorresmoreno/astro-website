@@ -20,6 +20,12 @@
         "upwork": {
           "type": "string"
         },
+        "medium": {
+          "type": "string"
+        },
+        "youtube": {
+          "type": "string"
+        },
         "education": {
           "type": "array",
           "items": [

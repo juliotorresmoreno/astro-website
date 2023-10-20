@@ -31,6 +31,8 @@ export interface SiteConfig {
   github?: string;
   linkedin?: string;
   upwork?: string;
+  medium?: string;
+  youtube?: string;
   experience?: Experience[];
   education?: Education[];
 }

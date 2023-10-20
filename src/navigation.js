@@ -5,25 +5,34 @@ export const headerData = {
   links: [
     {
       text: 'About Me',
-      href: getPermalink('/about'),
+      href: '#about',
     },
     {
-      text: 'Privacy',
-      href: getPermalink('/privacy'),
+      text: 'Features',
+      href: '#features',
     },
+    {
+      text: 'Insides',
+      href: '#insides',
+    },
+    {
+      text: 'Recommends',
+      href: '#recommends',
+    },
+    {
+      text: 'FAQS',
+      href: '#FAQS',
+    },
+    {
+      text: 'Contact',
+      href: '#contact',
+    },
+    {
+      text: 'Blog',
+      href: SITE.medium,
+    }
   ],
-  actions: [
-    {
-      text: 'Text Me',
-      href: `https://web.whatsapp.com/send?phone=${SITE.contactPhone}&text=Hi%20Julio%20Cesar%20Torres%20Moreno%20I%20want%20to%20talk%20with%20you%20about%20[Your%20Subject]`,
-      target: '_blank',
-    },
-    {
-      text: 'Contact Me',
-      href: `mailto:${SITE.contactEmail}?subject=Inquiry%20About%20[Your%20Subject]`,
-      target: '_blank',
-    },
-  ],
+  actions: [],
 };
 
 export const footerData = {
@@ -82,6 +91,11 @@ export const footerData = {
       ariaLabel: 'Linkedin',
       icon: 'tabler:brand-linkedin',
       href: SITE.linkedin,
+    },
+    {
+      ariaLabel: 'Medium',
+      icon: 'tabler:brand-medium',
+      href: SITE.medium,
     },
     // { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: SITE.github },
