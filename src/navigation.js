@@ -1,42 +1,15 @@
 import { SITE } from './utils/config';
 import { getPermalink } from './utils/permalinks';
-/*
-const links = [
-  {
-    text: 'About us',
-    href: getPermalink('/about'),
-  },
-  {
-    text: 'Personal',
-    href: getPermalink('/homes/personal'),
-  },
-  {
-    text: 'Contact',
-    href: getPermalink('/contact'),
-  },
-  {
-    text: 'Terms',
-    href: getPermalink('/terms'),
-  },
-  {
-    text: 'Privacy policy',
-    href: getPermalink('/privacy'),
-  },
-  {
-    text: 'Blog',
-    href: getBlogPermalink(),
-  },
-  {
-    text: 'Widgets',
-    href: '#',
-  },
-];*/
 
 export const headerData = {
   links: [
     {
       text: 'About Me',
       href: getPermalink('/about'),
+    },
+    {
+      text: 'Privacy',
+      href: getPermalink('/privacy'),
     },
   ],
   actions: [
